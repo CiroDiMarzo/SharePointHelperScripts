@@ -5,10 +5,12 @@ $list = $web.Lists["Business Process"]
 
 Write-Host -ForegroundColor Green "Adding item in list $($list.Title)"
 
+$title = "18.Divers"
+
 $listItem = $list.Items.Add()
-$listItem["Title"] = "19.Divers"
-$listItem["parlSourceURL"] = "http://pddokuclu-test.garaio.ch/docs/2/201/19.Divers"
-$listItem["parlDestURL"] = "http://pddokuclu-test.garaio.ch/arch/2/201/19.Divers"
+$listItem["Title"] = $title
+$listItem["parlSourceURL"] = "http://pddokuclu-test.garaio.ch/docs/2/201/$title"
+$listItem["parlDestURL"] = "http://pddokuclu-test.garaio.ch/arch/2/201/$title"
 $listItem["parlJobStatus"] = "offen"
 $listItem["parlStatus"] = "Offen"
 $listItem["parlJob"] = "provisioning"
